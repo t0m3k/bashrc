@@ -46,5 +46,5 @@ function c() {
 }
 
 function m() {
-    mdkir "$@" && cd "$@" && ls -lA
+    mkdir "$@" && cd "$@" && ls -lA
 }
