@@ -95,6 +95,10 @@ xhost +local:root > /dev/null 2>&1
 
 complete -cf sudo
 
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
 # Bash won't get SIGWINCH if another process is in the foreground.
 # Enable checkwinsize so that bash will check the terminal size when
 # it regains control.  #65623
@@ -103,19 +107,13 @@ shopt -s checkwinsize
 
 shopt -s expand_aliases
 
-# export QT_SELECT=4
+# don't put duplicate lines or lines starting with space in the history.# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
 
-# better yaourt colors
-export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
-
-export SSH_ASKPASS="/usr/bin/ksshaskpass"
-
-export JAVA_HOME="/usr/lib/jvm/java-version-openjdk"
-
-SUDO_EDITOR=kate
-
-source /usr/share/nvm/init-nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
