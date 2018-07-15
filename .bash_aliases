@@ -31,15 +31,12 @@ alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
 
-alias la="ls -la"
-alias ll="ls -lisa"
+alias la="ls -a"
+alias ll="ls -lhaG"
 
 alias cd..="cd .."
 alias ..="cd .."
 alias ...="cd ../.."
-
-
-alias ffw="firefox -P 'wdhp'"
 
 function c() {
     cd "$@" && ls -lA
