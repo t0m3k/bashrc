@@ -99,7 +99,7 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 
-PS1="\u \w \$(git branch 2>/dev/null | sed -n "s/* \(.*\)/\1 /p")$ "
+PS1='\[\e[1;33m\]\u@\h \w ->\n\[\e[1;36m\] \@ \d\$\[\e[m\] '
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
