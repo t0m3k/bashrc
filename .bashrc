@@ -98,7 +98,6 @@ HISTCONTROL=ignoreboth
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
-
 PS1='\[\e[1;33m\]\u@\h \w ->\n\[\e[1;36m\] \@ \d\$\[\e[m\] '
 
 export NVM_DIR="$HOME/.nvm"
