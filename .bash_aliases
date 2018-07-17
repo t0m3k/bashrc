@@ -39,9 +39,9 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 function c() {
-    cd "$@" && ls -lA
+    cd "$@" && ls -a
 }
 
 function m() {
-    mkdir "$@" && cd "$@" && ls -lA
+    mkdir "$@" && cd "$@" && ls -a
 }
