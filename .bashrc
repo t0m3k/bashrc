@@ -99,7 +99,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 GIT_PROMPT_ONLY_IN_REPO=0
-  source ~/.bash-git-prompt/gitprompt.sh
+GIT_PROMPT_THEME=Solarized
+source ~/.bash-git-prompt/gitprompt.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
